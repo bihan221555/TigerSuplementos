@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../style/style.css">
+    </head>
+    <body>
+        <header>
+            <div id="upperheader">
+                <img src="../logo.png">
+            </div>
+            <div id="lowerheader">
+                <ul>
+                    <li><a href="index.html">INÍCIO</a></li>
+                    <li><a href="calculo.html">CÁLCULO</a></li>
+                    <li><a href="imc.html">IMC</a></li>
+                    <li><a href="leideohm.html">LEI DE OHM</a></li>
+                    <li><a href="cep.html">CEP</a></li>
+                    <li>FORMULÁRIO</li>
+                    <li>CONTATO</li>
+                </ul>  
+            </div>
+        </header>
+        <section>
+            <article id="inicial">
+            </article>
+            <article id="formulario">
+            </article>
+            <article id="contato">
+            </article>
+        </section>
+        <div id="imc">
+            <label for="peso">Peso(KG)</label>
+            <input id="peso" type="number"><br>
+            
+            <label for="altura">Altura(MT)</label>
+            <input id="altura" type="number"><br>
+            
+            <div id="botoes">
+                <button onclick="imc()">Enviar</button>
+            </div>
+            
+            <h3 id="resultado"></h3>
+        </div>
+        
+        <script>
+            function imc(){
+                var peso = parseFloat(document.getElementById("peso").value);
+                var altura = parseFloat(document.getElementById("altura").value);
+                var resultado = peso / (altura*altura);
+                document.getElementById("resultado").innerHTML = resultado;
+            }
+        
+        </script>
+        
+        <footer>
+            <div id = upperfooter>
+                <img src="../Redes_sociais.png">
+            </div>
+            <div id = lowerfooter>
+                <a>
+                    Copyright ©2024; Designed by Leonardo Mello Carlette
+                </a>
+            </div>
+        </footer>
+    </body>
+</html>
+       

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../style/style.css">
+    </head>
+    <body>
+        <header>
+            <div id="upperheader">
+                <img src="../logo.png">
+            </div>
+            <div id="lowerheader">
+                <ul>
+                    <li><a href="index.html">INÍCIO</a></li>
+                    <li><a href="calculo.html">CÁLCULO</a></li>
+                    <li><a href="imc.html">IMC</a></li>
+                    <li><a href="leideohm.html">LEI DE OHM</a></li>
+                    <li><a href="cep.html">CEP</a></li>
+                    <li>FORMULÁRIO</li>
+                    <li>CONTATO</li>
+                </ul>  
+            </div>
+        </header>
+        <section>
+            <article id="inicial">
+            </article>
+            <article id="formulario">
+            </article>
+            <article id="contato">
+            </article>
+        </section>
+        <div id="cep">
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep2" maxlength="8" placeholder="Digite o CEP" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+            
+            <div id="botoes">
+                <button onclick="buscarEndereco()">Buscar Endereço</button>
+            </div>
+
+            <h2>Endereço</h2>
+    <label for="logradouro">Logradouro:</label>
+    <input type="text" id="logradouro" disabled />
+
+    <label for="bairro">Bairro:</label>
+    <input type="text" id="bairro" disabled />
+
+    <label for="cidade">Cidade:</label>
+    <input type="text" id="cidade" disabled />
+
+    <label for="estado">Estado:</label>
+    <input type="text" id="estado" disabled />
+        </div>
+        
+        <script>
+            function buscarEndereco() {
+            // Obtém o valor do campo de input do CEP
+            const cep = document.getElementById("cep2").value.trim(); // Remover espaços extras
+                console.log(cep)
+            // Verifica se o CEP tem o formato correto (8 caracteres numéricos)
+            if (cep.length !== 8 || isNaN(cep)) {
+                alert("Por favor, insira um CEP válido com 8 dígitos numéricos.");
+                return;
+            }
+
+            // Faz a requisição à API VIACEP
+            fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.erro) {
+                        alert("CEP não encontrado.");
+                    } else {
+                        // Exibe os dados do endereço
+                        document.getElementById("logradouro").value = data.logradouro || '';
+                        document.getElementById("bairro").value = data.bairro || '';
+                        document.getElementById("cidade").value = data.localidade || '';
+                        document.getElementById("estado").value = data.uf || '';
+                    }
+                })
+                .catch(error => {
+                    console.error("Erro ao consultar o CEP: ", error);
+                    alert("Ocorreu um erro ao consultar o CEP.");
+                });
+        }
+        </script>
+        
+        <footer>
+            <div id = upperfooter>
+                <img src="../Redes_sociais.png">
+            </div>
+            <div id = lowerfooter>
+                <a>
+                    Copyright ©2024; Designed by Leonardo Mello Carlette
+                </a>
+            </div>
+        </footer>
+    </body>
+</html>
+       
