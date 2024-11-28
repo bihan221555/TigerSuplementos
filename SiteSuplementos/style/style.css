@@ -1,89 +1,102 @@
 @font-face{
-    font-family: "Geosans";
-    src: url(../GeosansLight.ttf)
+    font-family: "Geosans" !important;
+    src: url(../GeosansLight.ttf) !important
+}
+
+#contatos-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+}
+
+#contatos-container .img{
+    height: 100px !important;
+    width: 100px !important;
 }
 
 body{
-    margin: 0;
+    margin: 0 !important;
+    
 }
 header{
-    height: 120px;
+    height: 120px !important;
 }
 
 footer{
-    position:absolute;
-    bottom: 0;
+    position:absolute !important; 
+    bottom: 0 !important;
 }
 
 footer img{
-    width: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 150px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 }
 
 header img{
-    width: 120px;
-    padding: 10px 260px;
+    width: 120px !important;
+    padding: 10px 260px !important;
 }
 #upperheader{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color:rgb(255, 255, 255);
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    background-color:rgb(255, 255, 255) !important;
 }
 #lowerheader{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 0 0 0 rgba(0, 0, 0, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(243, 243, 243)
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 0 0 0 rgba(0, 0, 0, 0) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background-color: rgb(243, 243, 243) !important
 }
     
 ul{
-    display: flex;
-    list-style: none;
+    display: flex !important;
+    list-style: none !important;
 }
 
 ul li{
-    margin-right: 10px;
-    margin-left: 10px;
-    font-size: 1.2em;
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+    font-size: 1.2em !important;
     font-family: "Geosans";
     color:black;
 }
 
 #upperfooter{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(243, 243, 243);
-    height: 120px;
-    width: 120px;  
-    width: 100vw;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background-color: rgb(243, 243, 243) !important;
+    height: 120px !important;
+    width: 120px !important;  
+    width: 100vw !important;
 }
 
 #lowerfooter{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    width: 100vw;
-    height: 50px;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background-color: white !important;
+    width: 100vw !important;
+    height: 50px !important;
 }
 
 a{
-    display: flex;
-    font-size: 1.2em;
-    color:black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex !important;
+    font-size: 1.2em !important;
+    color:black !important;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
 }
 
 #soma {
-    display: flex;
-    flex-direction: column;  /* Organiza os elementos em uma coluna */
+    display: flex ;
+    flex-direction: column;  
     justify-content: center;
-    align-items: center;  /* Centraliza todos os elementos */
+    align-items: center;  
     margin: 0 auto;
     padding-top: 10vh;
     font-family: "Geosans", sans-serif;
@@ -91,18 +104,18 @@ a{
 }
 
 #soma label {
-    margin-bottom: 5px;  /* Espaço entre o label e o input */
+    margin-bottom: 5px;  
 }
 
 #soma input {
-    margin-bottom: 15px;  /* Espaço entre os inputs e o botão */
+    margin-bottom: 15px;  
     padding: 8px;
-    width: 200px;  /* Define uma largura para os inputs */
+    width: 200px; 
 }
 
 #soma button {
     padding: 10px 20px;
-    margin-bottom: 20px;  /* Espaço entre o botão e o resultado */
+    margin-bottom: 20px; 
     cursor: pointer;
 }
 
@@ -112,9 +125,9 @@ a{
 
 #imc {
     display: flex;
-    flex-direction: column;  /* Organiza os elementos em uma coluna */
+    flex-direction: column;  
     justify-content: center;
-    align-items: center;  /* Centraliza todos os elementos */
+    align-items: center;  
     margin: 0 auto;
     padding-top: 10vh;
     font-family: "Geosans", sans-serif;
@@ -122,18 +135,18 @@ a{
 }
 
 #imc label {
-    margin-bottom: 5px;  /* Espaço entre o label e o input */
+    margin-bottom: 5px;  
 }
 
 #imc input {
-    margin-bottom: 15px;  /* Espaço entre os inputs e o botão */
+    margin-bottom: 15px;  
     padding: 8px;
-    width: 200px;  /* Define uma largura para os inputs */
+    width: 200px;  
 }
 
 #imc button {
     padding: 10px 20px;
-    margin-bottom: 20px;  /* Espaço entre o botão e o resultado */
+    margin-bottom: 20px;  
     cursor: pointer;
 }
 
@@ -143,9 +156,9 @@ a{
 
 #leideohm {
     display: flex;
-    flex-direction: column;  /* Organiza os elementos em uma coluna */
+    flex-direction: column;  
     justify-content: center;
-    align-items: center;  /* Centraliza todos os elementos */
+    align-items: center;  
     margin: 0 auto;
     padding-top: 10vh;
     font-family: "Geosans", sans-serif;
@@ -153,18 +166,18 @@ a{
 }
 
 #leideohm label {
-    margin-bottom: 5px;  /* Espaço entre o label e o input */
+    margin-bottom: 5px;  
 }
 
 #leideohm input {
-    margin-bottom: 15px;  /* Espaço entre os inputs e o botão */
+    margin-bottom: 15px;  
     padding: 8px;
-    width: 200px;  /* Define uma largura para os inputs */
+    width: 200px;  
 }
 
 #leideohm button {
     padding: 10px 20px;
-    margin-bottom: 20px;  /* Espaço entre o botão e o resultado */
+    margin-bottom: 20px;  
     cursor: pointer;
 }
 
@@ -174,9 +187,9 @@ a{
 
 #cep {
     display: flex;
-    flex-direction: column;  /* Organiza os elementos em uma coluna */
+    flex-direction: column;  
     justify-content: center;
-    align-items: center;  /* Centraliza todos os elementos */
+    align-items: center;  
     margin: 0 auto;
     padding-top: 10vh;
     font-family: "Geosans", sans-serif;
@@ -184,21 +197,119 @@ a{
 }
 
 #cep label {
-    margin-bottom: 5px;  /* Espaço entre o label e o input */
+    margin-bottom: 5px;  
 }
 
 #cep input {
-    margin-bottom: 15px;  /* Espaço entre os inputs e o botão */
+    margin-bottom: 15px;  
     padding: 8px;
-    width: 200px;  /* Define uma largura para os inputs */
+    width: 200px;  
 }
 
 #cep button {
     padding: 10px 20px;
-    margin-bottom: 20px;  /* Espaço entre o botão e o resultado */
+    margin-bottom: 20px;  
     cursor: pointer;
 }
 
 #cep h3 {
     margin-top: 0;
 }
+
+.slider {
+    margin: 0 auto;
+    width: 800px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img {
+    width: 800px;
+    height: 100%;
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 800px;
+    margin-top:  -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #FFF;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+
+}
+
+.manual-btn:hover{
+    background-color: #FFF;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+.navigation-auto div{
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #FFF;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #FFF;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #FFF;
+}
+

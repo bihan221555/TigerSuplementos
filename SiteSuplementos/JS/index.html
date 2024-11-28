@@ -6,7 +6,7 @@
     <body>
         <header>
             <div id="upperheader">
-                <img src="../logo.png">
+                <img src="../logoSuplementos.png">
             </div>
             <div id="lowerheader">
                 <ul>
@@ -15,18 +15,54 @@
                     <li><a href="imc.html">IMC</a></li>
                     <li><a href="leideohm.html">LEI DE OHM</a></li>
                     <li><a href="cep.html">CEP</a></li>
-                    <li>FORMULÁRIO</li>
-                    <li>CONTATO</li>    
+                    <li><a href="contato.html">CONTATO</a></li> 
                 </ul>  
             </div>
         </header>
-        <section>
-            <article id="inicial">
-            </article>
-            <article id="formulario">
-            </article>
-            <article id="contato">
-            </article>
+    
+        <div class="slider">
+            <div class="slides" style="margin-top: 180px;">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+
+                <div class="slide first">
+                    <img src="../suplementos 1.jpg">
+                </div>
+                <div class="slide ">
+                    <img src="../suplementos 2.png">
+                </div>
+                <div class="slide ">
+                    <img src="../suplementos 3.png">
+                </div>
+            </div>
+
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+        </div>
+        
+        <script>
+            let count = 1;
+            document.getElementById("radio1").checked = true;
+
+            setInterval( function(){
+                nextImage();
+            }, 2000)
+
+            function nextImage(){
+                count++;
+                if(count>4){
+                    count = 1;
+                }
+
+                document.getElementById("radio"+count).checked = true;
+            }
+
+        </script>
+
         <footer>
             <div id = upperfooter>
                 <img src="../Redes_sociais.png">

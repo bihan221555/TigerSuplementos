@@ -6,7 +6,7 @@
     <body>
         <header>
             <div id="upperheader">
-                <img src="../logo.png">
+                <img src="../logoCep.png">
             </div>
             <div id="lowerheader">
                 <ul>
@@ -15,8 +15,7 @@
                     <li><a href="imc.html">IMC</a></li>
                     <li><a href="leideohm.html">LEI DE OHM</a></li>
                     <li><a href="cep.html">CEP</a></li>
-                    <li>FORMULÁRIO</li>
-                    <li>CONTATO</li>
+                    <li><a href="contato.html">CONTATO</a></li> 
                 </ul>  
             </div>
         </header>
@@ -52,23 +51,19 @@
         
         <script>
             function buscarEndereco() {
-            // Obtém o valor do campo de input do CEP
-            const cep = document.getElementById("cep2").value.trim(); // Remover espaços extras
+            const cep = document.getElementById("cep2").value.trim();
                 console.log(cep)
-            // Verifica se o CEP tem o formato correto (8 caracteres numéricos)
             if (cep.length !== 8 || isNaN(cep)) {
                 alert("Por favor, insira um CEP válido com 8 dígitos numéricos.");
                 return;
             }
 
-            // Faz a requisição à API VIACEP
             fetch(`https://viacep.com.br/ws/${cep}/json/`)
                 .then(response => response.json())
                 .then(data => {
                     if (data.erro) {
                         alert("CEP não encontrado.");
                     } else {
-                        // Exibe os dados do endereço
                         document.getElementById("logradouro").value = data.logradouro || '';
                         document.getElementById("bairro").value = data.bairro || '';
                         document.getElementById("cidade").value = data.localidade || '';
